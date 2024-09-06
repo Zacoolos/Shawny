@@ -9,8 +9,9 @@ function doPropertyFinances() {
     properties_finances = {
         incomes: (Math.random() * (60 - 20) + 40) / 100,
         expenses: (Math.random() * (40 - 10) + 10) / 100
-    }
+    };
 }
+
 
 function doPropertyTypes() {
     property_types = {
@@ -68,17 +69,6 @@ doPropertyButton('Mansion');
 doPropertyButton('Planet');
 
 
-
-
-
-
-// let apartmentPrice = Math.random() * (500000 - 120000) + 120000;
-// let housePrice = Math.random() * (30000000 - 400000) + 400000;
-// let castlePrice = Math.random() * (800000000 - 29000000) + 29000000;
-// let planetPrice = Math.random() * (80000000000000 - 5000000000000) + 5000000000000;
-// let retailStorePrice = Math.random() * (50000 - 15000) + 15000;
-
-
 function openPropertyMenu() {
     document.getElementById('property-menu').style.display = 'block';
     document.getElementById('property-bttn').disabled = true;
@@ -111,78 +101,3 @@ function buyProperty(property_name) {
         
     }
 }
-
-
-function openRetailStore() {
-    if (money > retailStorePrice) {
-        money -= retailStorePrice;
-        updateCounter();
-        addAction("You just opened a retail store for $" + retailStorePrice.toFixed(2));
-
-        const openRetailStoreButton = document.getElementById('openRetailStoreButton');
-        openRetailStoreButton.disabled = true;
-        properties.push('retail store');
-    } else {
-        alert("You don't have enough money to open up a retail store.")
-    }
-}
-
-// function buyProperty(property, price) {
-//     if (money >= price) {
-//         money -= price;
-//         addAction('Bought ' + property + ' for $' + price.toFixed(2));
-//         properties.push({ name: property, price: price });
-
-//         if (property === 'Retail Store') {
-//             let incomeRate = Math.random() * (85 - 25) + 25; // Income between 25% and 85%
-//             let expenseRate = Math.random() * (60 - 10) + 10; // Expense between 10% and 60%
-
-//             setInterval(function () {
-//                 let income = price * (incomeRate / 100);
-//                 money += income;
-//                 addAction(property + ': Income of $' + income.toFixed(2) + ' (' + incomeRate.toFixed(2) + '%)');
-//                 updateCounter();
-//             }, 30000);
-
-//             setInterval(function () {
-//                 let expense = price * (expenseRate / 100);
-//                 money -= expense;
-//                 addAction(property + ': Expense of $' + expense.toFixed(2) + ' (' + expenseRate.toFixed(2) + '%)');
-//                 updateCounter();
-//             }, 30000);
-
-//         } else if (property === 'Planet Earth' || property === 'Planet') {
-//             let planetIncome = Math.random() * (1500000000000 - 2000000000) + 2000000000;
-//             let planetExpense = Math.random() * (2000000000000 - 6000000000) + 6000000000;
-//             setInterval(function () {
-//                 money += planetIncome; // Add income
-//                 addAction(property + ': Income of $' + planetIncome.toFixed(2));
-//                 updateCounter();
-//             }, 30000);
-//             setInterval(function () {
-//                 money -= planetExpense; // Deduct expense
-//                 addAction(property + ': Expense of $' + planetExpense.toFixed(2));
-//                 updateCounter();
-//             }, 30000);
-//         } else {
-//             let incomeRate = Math.random() * (60 - 10) + 10;
-//             let expenseRate = Math.random() * (8 - 3) + 3;
-//             setInterval(function () {
-//                 let income = price * (incomeRate / 100);
-//                 money += income;
-//                 addAction(property + ': Income of $' + income.toFixed(2) + ' (' + incomeRate.toFixed(2) + '%)');
-//                 updateCounter();
-//             }, 30000);
-//             setInterval(function () {
-//                 let expense = price * (expenseRate / 100);
-//                 money -= expense;
-//                 addAction(property + ': Expense of $' + expense.toFixed(2) + ' (' + expenseRate.toFixed(2) + '%)');
-//                 updateCounter();
-//             }, 30000);
-//         }
-
-//         updateCounter();
-//     } else {
-//         alert("You don't have enough money to buy this property.");
-//     }
-// }
