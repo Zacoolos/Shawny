@@ -71,7 +71,7 @@ function animateSnow(snow) {
     });
 }
 
-// Function to create and animate snow elements
+// Function to create and animate snow elements e
 function createSnowElement() {
     if (document.visibilityState != 'hidden') {
     const SnowX = document.createElement("div");
