@@ -73,11 +73,13 @@ function animateSnow(snow) {
 
 // Function to create and animate snow elements
 function createSnowElement() {
+    if (document.visibilityState != 'hidden') {
     const SnowX = document.createElement("div");
     SnowX.className = "snowflake";  // Use a class for consistent styling
     SnowX.style.position = "absolute";  // Ensure it is positioned absolutely
     document.body.appendChild(SnowX);  // Append directly to the body
     animateSnow(SnowX);
+    }
 }
 
 // Recursive function to create snow with delay
@@ -135,6 +137,15 @@ function Begin() {
   
     if (IntroTitle != null) {
     IntroTitle.remove();           // Removes TITLE
+    }
+
+
+
+    snowflks = document.querySelectorAll('.snowflake');
+    if (snowflks != null) {
+    snowflks.forEach(snowflake => {                 // Removes snowflakes
+        snowflake.remove();
+    });
     }
 
 

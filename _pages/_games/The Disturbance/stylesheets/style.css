@@ -73,7 +73,7 @@ body {
 
 #TitleIntro {
     background-color: transparent;
-    background: linear-gradient(45deg, rgb(179, 178, 179), rgb(114, 114, 114));
+    background: linear-gradient(30deg, rgb(232, 232, 232), rgb(176, 176, 176));
     background-clip: text;
     -webkit-text-fill-color: transparent; /* Ensures text is transparent to show gradient */
     background-clip: text; /* For non-WebKit browsers */
@@ -93,8 +93,8 @@ body {
 }
 
 #Snow {
-    height: 2%;
-    width: 2%;
+    height: 1.5%;
+    width: 1.5%;
     background-color: rgb(255, 255, 255);
     filter: blur(12px) brightness(2);
     border-radius: 50%; 
